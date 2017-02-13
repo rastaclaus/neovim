@@ -1,7 +1,6 @@
-autoload
 bundle
-colors
-!colors/seoul266.vim
+colors/*
+!colors/seoul*
 templ/.ropeproject
 .netrwhist
 
