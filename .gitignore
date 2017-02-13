@@ -1,0 +1,7 @@
+autoload
+bundle
+colors
+!colors/seoul266.vim
+templ/.ropeproject
+.netrwhist
+
