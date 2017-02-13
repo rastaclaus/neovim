@@ -81,11 +81,9 @@ filetype plugin indent on
 
 
 let g:SuperTabDefaultCompletionType = "context"
-"let g:deoplete#enable_at_startup = 1
-"if !exists('g:deoplete#omni#input_patterns')
-"    let g:deoplete#omni#input_patterns = {}
-"endif
-"let g:deoplete#disable_auto_complete = 1
+let g:ycm_global_ycm_extra_conf = "~/.config/nvim/.ycm_extra_conf.py"
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
 let g:syntastic_mode_map = {
     \ "mode": "passive",
     \ "active_filetypes": [],
