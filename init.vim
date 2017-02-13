@@ -75,7 +75,7 @@ set statusline=%F%m%r%h%w\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ [%{&fenc}]\ [%{&enc}
 "Начало <Инициализация Pathogen>
 filetype off
 call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 filetype plugin indent on
 "Конец <Инициализация Pathogen>
 
@@ -83,18 +83,17 @@ filetype plugin indent on
 let g:SuperTabDefaultCompletionType = "context"
 "let g:deoplete#enable_at_startup = 1
 "if !exists('g:deoplete#omni#input_patterns')
-"  let g:deoplete#omni#input_patterns = {}
+"    let g:deoplete#omni#input_patterns = {}
 "endif
-"let g:jedi#completions_enabled = 0
-"let g:syntastic_mode_map = {
-"    \ "mode": "passive",
-"    \ "active_filetypes": [],
-"    \ "passive_filetypes": [] }
 "let g:deoplete#disable_auto_complete = 1
+let g:syntastic_mode_map = {
+    \ "mode": "passive",
+    \ "active_filetypes": [],
+    \ "passive_filetypes": [] }
 
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 "inoremap <expr> <Tab>  deoplete#mappings#manual_complete()
-"let g:syntastic_cpp_compiler = "g++"
+let g:syntastic_cpp_compiler = "g++"
 
 
 set noerrorbells visualbell t_vb=
