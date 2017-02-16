@@ -65,6 +65,7 @@ nmap <silent> <F2> :NERDTreeToggle<CR>
 nmap <silent> <F5> :Autoformat<CR>
 nmap <silent> <F6> :NextColorScheme<CR>
 nmap <silent> <F7> :PrevColorScheme<CR>
+
 if exists(':tnoremap')
     tnoremap <Esc> <C-\><C-n>
 endif
@@ -81,6 +82,14 @@ filetype plugin indent on
 
 let g:SuperTabDefaultCompletionType = "context"
 
+let g:deoplete#enable_at_startup = 1
+if !exists('g:deoplete#omni#input_patterns')
+  let g:deoplete#omni#input_patterns = {}
+endif
+let g:deoplete#disable_auto_complete = 1
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+inoremap <expr> <Tab>  deoplete#mappings#manual_complete()
+
 let g:syntastic_mode_map = {
     \ "mode": "passive",
     \ "active_filetypes": [],
@@ -94,7 +103,7 @@ if has('autocmd')
   autocmd InsertLeave * set cursorline!
 endif
 
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+"autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 map <F3>  :call TRANSLATE()<cr>
 
@@ -111,3 +120,5 @@ function TRANSLATE()
    let out = system(cmds)
    echo out
 endfunction
+
+
