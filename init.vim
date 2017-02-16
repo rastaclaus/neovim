@@ -71,7 +71,6 @@ endif
 
 set statusline=%F%m%r%h%w\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ [%{&fenc}]\ [%{&enc}]
 
-
 "Начало <Инициализация Pathogen>
 filetype off
 call pathogen#helptags()
@@ -82,21 +81,13 @@ filetype plugin indent on
 
 let g:SuperTabDefaultCompletionType = "context"
 
-let g:ycm_auto_trigger = 0
-let g:pymode_rope_completion = 0
-let g:ycm_global_ycm_extra_conf = "~/.config/nvim/.ycm_extra_conf.py"
-" let g:ycm_cache_omnifunc = 1
-" let g:ycm_key_list_select_completion=[]
-" let g:ycm_key_list_previous_completion=[]
+let g:pymode_rope_completion = 1
+
 let g:syntastic_mode_map = {
     \ "mode": "passive",
     \ "active_filetypes": [],
     \ "passive_filetypes": [] }
-
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-"inoremap <expr> <Tab>  deoplete#mappings#manual_complete()
 let g:syntastic_cpp_compiler = "g++"
-
 
 set noerrorbells visualbell t_vb=
 if has('autocmd')
@@ -105,7 +96,10 @@ if has('autocmd')
   autocmd InsertLeave * set cursorline!
 endif
 
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
 map <F3>  :call TRANSLATE()<cr>
+
 function TRANSLATE()
    let  a=getline('.')
    let co=col('.')-1
