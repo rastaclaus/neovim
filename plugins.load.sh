@@ -1,5 +1,4 @@
 #! /bin/bash
-sudo pacman -S python-pylint python-jedi
 cd bundle
 cat  ../plugins.list | while read line
 do
