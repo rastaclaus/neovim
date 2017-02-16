@@ -81,8 +81,6 @@ filetype plugin indent on
 
 let g:SuperTabDefaultCompletionType = "context"
 
-let g:pymode_rope_completion = 1
-
 let g:syntastic_mode_map = {
     \ "mode": "passive",
     \ "active_filetypes": [],
