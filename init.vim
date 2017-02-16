@@ -79,31 +79,42 @@ call pathogen#infect()
 filetype plugin indent on
 "Конец <Инициализация Pathogen>
 
-
 let g:SuperTabDefaultCompletionType = "context"
 
-let g:deoplete#enable_at_startup = 1
-if !exists('g:deoplete#omni#input_patterns')
-  let g:deoplete#omni#input_patterns = {}
+let g:virtualenv = $VIRTUAL_ENV
+if g:virtualenv == ''
+  let g:deoplete#omni_patterns = {}
+  let g:deoplete#sources#clang#libclang_path = "/usr/lib/libclang.so"
+  let g:deoplete#sources#clang#clang_header = "/usr/lib/clang"
+  let g:deoplete#enable_at_startup = 1
+  let g:deoplete#disable_auto_complete = 1
+  inoremap <silent><expr> <C-space> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
 endif
-let g:deoplete#disable_auto_complete = 1
+
+
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-inoremap <expr> <Tab>  deoplete#mappings#manual_complete()
 
 let g:syntastic_mode_map = {
     \ "mode": "passive",
     \ "active_filetypes": [],
     \ "passive_filetypes": [] }
+
 let g:syntastic_cpp_compiler = "g++"
+
+let g:pymode_rope_completion = 1
+let g:pymode_rope_goto_definition_bind = "<C-]>"
+let g:pymode_doc_bind = "<C-S-d>"
+let g:pymode_python = 'python3'
+let g:pymode_rope_complete_on_dot = 0
 
 set noerrorbells visualbell t_vb=
 if has('autocmd')
   autocmd GUIEnter * set visualbell t_vb=
   autocmd InsertEnter * set cursorline
   autocmd InsertLeave * set cursorline!
+  autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+  autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 endif
-
-"autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 map <F3>  :call TRANSLATE()<cr>
 
@@ -120,5 +131,4 @@ function TRANSLATE()
    let out = system(cmds)
    echo out
 endfunction
-
 
