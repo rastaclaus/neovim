@@ -132,3 +132,5 @@ function TRANSLATE()
    echo out
 endfunction
 
+let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
