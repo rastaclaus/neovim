@@ -41,8 +41,6 @@ set listchars=tab:>.,trail:. "Установить символы которым
 autocmd FileType * set tabstop=2|set shiftwidth=2
 autocmd FileType python set tabstop=4|set shiftwidth=4
 
-au BufNewFile *.py 0r ~/.config/nvim/templ/py.skel
-
 autocmd FileType * 
       \ match Error /\%161v.\+/
 
@@ -83,11 +81,11 @@ let g:SuperTabDefaultCompletionType = "context"
 
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
-
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:virtualenv = $VIRTUAL_ENV
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -95,19 +93,15 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_compiler = "g++"
 
-
-let g:jedi#auto_initialization = 1
-let g:jedi#completions_enabled = 0
-
-let g:virtualenv = $VIRTUAL_ENV
+let g:deoplete#enable_at_startup = 1
 let g:deoplete#omni_patterns = {}
 let g:deoplete#sources#clang#libclang_path = "/usr/lib/libclang.so"
 let g:deoplete#sources#clang#clang_header = "/usr/lib/clang"
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#disable_auto_complete = 1
-let g:deoplete#complete_method = "omnifunc"
-let g:deoplete#max_list = 40
 
+"let g:deoplete#complete_method='omnifunc'
+"let g:deoplete#disable_auto_complete = 1
+"set omnifunc=deoplete#mappings#manual_complete()
+inoremap <expr> <C-n>  deoplete#mappings#manual_complete()
 
 "set noerrorbells visualbell t_vb=
 if has('autocmd')
