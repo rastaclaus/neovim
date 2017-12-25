@@ -8,8 +8,5 @@ https://github.com/zchee/deoplete-clang.git
 https://github.com/Shougo/deoplete.nvim.git
 https://github.com/jmcantrell/vim-virtualenv.git
 https://github.com/vim-latex/vim-latex.git
-<<<<<<< HEAD
 https://github.com/davidhalter/jedi-vim.git
 https://github.com/nvie/vim-flake8.git
-=======
->>>>>>> f6513328c5c333d24187e09348937b2206783c43
