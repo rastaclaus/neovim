@@ -9,4 +9,4 @@ https://github.com/Shougo/deoplete.nvim.git
 https://github.com/jmcantrell/vim-virtualenv.git
 https://github.com/vim-latex/vim-latex.git
 https://github.com/davidhalter/jedi-vim.git
-https://github.com/nvie/vim-flake8.git
+https://github.com/vim-syntastic/syntastic.git

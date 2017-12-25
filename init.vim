@@ -40,8 +40,6 @@ set listchars=tab:>.,trail:. "Установить символы которым
 
 autocmd FileType * set tabstop=2|set shiftwidth=2
 autocmd FileType python set tabstop=4|set shiftwidth=4
-autocmd BufWritePost *.py call Flake8()
-autocmd FileType python map <buffer> <C-S> :call Flake8()<CR>
 
 au BufNewFile *.py 0r ~/.config/nvim/templ/py.skel
 
@@ -85,22 +83,17 @@ let g:SuperTabDefaultCompletionType = "context"
 
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
-let g:syntastic_mode_map = {
-    \ "mode": "passive",
-    \ "active_filetypes": [],
-    \ "passive_filetypes": [] }
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_compiler = "g++"
-
-"let g:pymode_rope_completion = 0
-" let g:pymode_rope_goto_definition_bind = "<C-]>"
-"let g:pymode_doc_bind = "<C-S-d>"
-"let g:pymode_python = 'python3'
-"let g:pymode_folding = 0
-"let g:pymode_rope_complete_on_dot = 0
-"let g:pymode_lint_checkers = ['pylint', 'pylama', 'pep8']
-"let g:pymode_run = 1
-"let g:pymode_run_bind = "<F29>"
 
 
 let g:jedi#auto_initialization = 1
@@ -115,21 +108,6 @@ let g:deoplete#disable_auto_complete = 1
 let g:deoplete#complete_method = "omnifunc"
 let g:deoplete#max_list = 40
 
-let g:flake8_show_in_file = 1
-let g:flake8_show_in_gutter = 1
-
-let flake8_error_marker='EE' " set error marker to 'EE' 
-let flake8_warning_marker='WW' " set warning marker to 'WW' 
-"flake8_pyflake_marker='' " disable PyFlakes warnings 
-"flake8_complexity_marker='' " disable McCabe complexity warnings 
-"flake8_naming_marker='' " disable naming warnings
-
-" to use colors defined in the colorscheme
-highlight link Flake8_Error      Error
-highlight link Flake8_Warning    WarningMsg
-highlight link Flake8_Complexity WarningMsg
-highlight link Flake8_Naming     WarningMsg
-highlight link Flake8_PyFlake    WarningMsg
 
 "set noerrorbells visualbell t_vb=
 if has('autocmd')
