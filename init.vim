@@ -156,13 +156,10 @@ function TRANSLATE()
    echo out
 endfunction
 
-<<<<<<< HEAD
 set pdev=Virtual_PDF_Printer
 set printoptions=paper:A4,syntax:y,wrap:y,duplex:long
 set printencoding=koi8-r
 
 
-=======
->>>>>>> f6513328c5c333d24187e09348937b2206783c43
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'

@@ -1,8 +1,5 @@
 #! /bin/bash
-<<<<<<< HEAD
 # sudo pacman -S python-pylint python-jedi
-=======
->>>>>>> f6513328c5c333d24187e09348937b2206783c43
 cd bundle
 cat  ../plugins.list | while read line
 do
