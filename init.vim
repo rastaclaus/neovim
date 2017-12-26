@@ -125,7 +125,9 @@ let g:Tex_DefaultTargetFormat='pdf'
 
 
 function! MyOnBattery()
-  return readfile('/sys/class/power_supply/ACAD/online') == ['0']
+  if !empty(glob("/sys/class/power_supply/ACAD"))
+    return readfile('/sys/class/power_supply/ACAD/online') == ['0']
+  endif
 endfunction
 if MyOnBattery()
   call neomake#configure#automake('w')
