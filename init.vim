@@ -134,6 +134,6 @@ if MyOnBattery()
 else
   call neomake#configure#automake('nrw', 1000)
 endif
-let g:neomake_python_enabled_makers = ['flake8', 'pylint']
+let g:neomake_python_enabled_makers = ['flake8', 'pylint', 'pylama']
 
 
