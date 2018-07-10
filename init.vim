@@ -8,7 +8,7 @@ set laststatus=2 "Всегда показывать строку состоян�
 set number "Нумеровать строки
 set numberwidth=4 "Ширина поля нумерации строк
 set showmatch "Показывать первую парную скобку после ввода второй
-set guifont=Monospace\ 10 "не работает
+set guifont=Monospace\ 12 "не работает
 set showcmd
 set splitbelow
 set splitright
@@ -22,6 +22,7 @@ set guicursor=a:blinkon0
 set t_Co=256
 colors seoul256
 set guioptions=""
+" hi Normal guibg=NONE ctermbg=NONE
 
 "Поведение
 set nocompatible "Отключить режим совместимости с классическим Vi
@@ -61,8 +62,8 @@ set imsearch=0 " по умолчанию - латинская раскладка
 
 nmap <silent> <F2> :NERDTreeToggle<CR>
 nmap <silent> <F5> :Autoformat<CR>
-nmap <silent> <F6> :NextColorScheme<CR>
-nmap <silent> <F7> :PrevColorScheme<CR>
+nmap <silent> <F6> :colorscheme atom<CR>
+nmap <silent> <F7> :colorscheme seoul256<CR>
 
 if exists(':tnoremap')
     tnoremap <Esc> <C-\><C-n>
@@ -89,7 +90,7 @@ autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 let g:deoplete#sources#clang#libclang_path = "/usr/lib/libclang.so"
 let g:deoplete#sources#clang#clang_header = "/usr/lib/clang"
 
-let g:jedi#completions_enabled = 0
+let g:jedi#completions_enabled = 1
 
 if has('autocmd')
   autocmd GUIEnter * set visualbell t_vb=
@@ -134,6 +135,6 @@ if MyOnBattery()
 else
   call neomake#configure#automake('nrw', 1000)
 endif
-let g:neomake_python_enabled_makers = ['flake8', 'pylint', 'pylama']
+let g:neomake_python_enabled_makers = ['pylint']
 
 
