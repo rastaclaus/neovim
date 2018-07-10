@@ -20,7 +20,6 @@ set guicursor=a:blinkon0
 
 
 set t_Co=256
-colors seoul256
 set guioptions=""
 " hi Normal guibg=NONE ctermbg=NONE
 
@@ -62,8 +61,8 @@ set imsearch=0 " по умолчанию - латинская раскладка
 
 nmap <silent> <F2> :NERDTreeToggle<CR>
 nmap <silent> <F5> :Autoformat<CR>
-nmap <silent> <F6> :colorscheme atom<CR>
-nmap <silent> <F7> :colorscheme seoul256<CR>
+nmap <silent> <F6> :hi Normal guibg=None ctermbg=None<CR>
+nmap <silent> <F7> :hi Normal ctermbg=235 guibg=None<CR>
 
 if exists(':tnoremap')
     tnoremap <Esc> <C-\><C-n>
@@ -137,4 +136,4 @@ else
 endif
 let g:neomake_python_enabled_makers = ['pylint']
 
-
+colors deus
