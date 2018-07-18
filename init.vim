@@ -91,6 +91,10 @@ let g:deoplete#sources#clang#clang_header = "/usr/lib/clang"
 
 let g:jedi#completions_enabled = 1
 
+if has("python3")
+  let g:jedi#force_py_version = 3
+endif
+
 if has('autocmd')
   autocmd GUIEnter * set visualbell t_vb=
   autocmd InsertEnter * set cursorline
@@ -136,4 +140,5 @@ else
 endif
 let g:neomake_python_enabled_makers = ['pylint']
 
+set background=dark
 colors deus
