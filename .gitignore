@@ -1,6 +1,7 @@
 bundle
 colors/*
 !colors/seoul*
+!colors/deus*
 templ/.ropeproject
 .netrwhist
 
