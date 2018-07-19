@@ -1,6 +1,5 @@
 ""Начало Внешний вид
 "let $TERM='fbterm'
-
 syntax enable
 set shortmess+=I
 set syntax=on "Включить подсветку синтаксиса
@@ -36,7 +35,7 @@ set expandtab "Пробелы вместо табуляции
 set autoindent "Автоматические отступы
 set smartindent "Умные отступы
 set list "Включить подсветку табуляции и пробелов в конце строки
-set listchars=tab:>.,trail:. "Установить символы которыми будет осуществляться подсветка
+set listchars=tab:->,trail:- "Установить символы которыми будет осуществляться подсветка
 
 autocmd FileType * set tabstop=2|set shiftwidth=2
 autocmd FileType python set tabstop=4|set shiftwidth=4
@@ -50,8 +49,7 @@ autocmd FileType cpp
 augroup javascript
     au!
     au FileType javascript setlocal foldmethod=syntax
-    au FileType javascript setlocal noswitchtab
-    au FileType javascript setlocal set listchars&
+    au FileType javascript setlocal noexpandtab
 augroup END
 
 "Начало <Настройки поиска>
