@@ -47,6 +47,12 @@ autocmd FileType *
 autocmd FileType cpp 
       \ match Error /\%81v.\+/
 "Конец
+augroup javascript
+    au!
+    au FileType javascript setlocal foldmethod=syntax
+    au FileType javascript setlocal noswitchtab
+    au FileType javascript setlocal set listchars&
+augroup END
 
 "Начало <Настройки поиска>
 set nohlsearch "Подсветка результатов поиска
