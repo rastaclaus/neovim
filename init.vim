@@ -142,6 +142,14 @@ if MyOnBattery()
 else
   call neomake#configure#automake('nrw', 1000)
 endif
+
+let g:neomake_python_pylint_exe = 'python'
+let g:neomake_python_pylint_args = [
+    \ '/usr/bin/pylint',
+    \ '--output-format=text',
+    \ '--msg-template="{path}:{line}:{column}:{C}: [{symbol}] {msg} [{msg_id}]"',
+    \ '--reports=no'
+    \ ]
 let g:neomake_python_enabled_makers = ['pylint']
 
 set background=dark
