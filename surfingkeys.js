@@ -8,7 +8,7 @@ Front.registerInlineQuery({
 			res = JSON.parse(res.text);
 			return res.text;
 		} catch (e) {
-			return "";
+			return e;
 		}
 	}
 });
