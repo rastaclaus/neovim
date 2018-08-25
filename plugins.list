@@ -6,10 +6,11 @@ https://github.com/Chiel92/vim-autoformat.git
 https://github.com/tpope/vim-surround.git
 https://github.com/zchee/deoplete-clang.git
 https://github.com/Shougo/deoplete.nvim.git
+https://github.com/zchee/deoplete-jedi.git
 https://github.com/davidhalter/jedi-vim.git
-https://github.com/jmcantrell/vim-virtualenv.git
 https://github.com/vim-latex/vim-latex.git
 https://github.com/neomake/neomake.git
 https://github.com/Vimjas/vim-python-pep8-indent.git
 https://github.com/rafi/awesome-vim-colorschemes.git
 https://github.com/pangloss/vim-javascript.git
+https://github.com/lepture/vim-jinja.git
