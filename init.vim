@@ -85,14 +85,14 @@ let g:SuperTabDefaultCompletionType = "context"
 
 "let g:virtualenv = $VIRTUAL_ENV
 
-let g:deoplete#enable_at_startup = 1
-if !exists('g:deoplete#omni#input_patterns')
-  let g:deoplete#omni#input_patterns = {}
-endif
+"let g:deoplete#enable_at_startup = 1
+"if !exists('g:deoplete#omni#input_patterns')
+"  let g:deoplete#omni#input_patterns = {}
+"endif
 
 
-let g:deoplete#sources#clang#libclang_path = "/usr/lib/libclang.so"
-let g:deoplete#sources#clang#clang_header = "/usr/lib/clang"
+"let g:deoplete#sources#clang#libclang_path = "/usr/lib/libclang.so"
+"let g:deoplete#sources#clang#clang_header = "/usr/lib/clang"
 
 "autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 "let g:jedi#completions_enabled = 1
