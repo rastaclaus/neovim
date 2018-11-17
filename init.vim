@@ -40,16 +40,16 @@ set listchars=tab:->,trail:- "Установить символы которым
 autocmd FileType * set tabstop=2|set shiftwidth=2
 autocmd FileType python set tabstop=4|set shiftwidth=4
 
-autocmd FileType * 
-      \ match Error /\%161v.\+/
+"autocmd FileType * 
+"      \ match Error /\%161v.\+/
 
-autocmd FileType cpp 
-      \ match Error /\%81v.\+/
+"autocmd FileType cpp 
+"      \ match Error /\%81v.\+/
 "Конец
 augroup javascript
     au!
     au FileType javascript setlocal foldmethod=syntax
-    au FileType javascript setlocal noexpandtab
+"   au FileType javascript setlocal noexpandtab
 augroup END
 
 "Начало <Настройки поиска>
