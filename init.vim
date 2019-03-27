@@ -37,6 +37,9 @@ set smartindent "Умные отступы
 set list "Включить подсветку табуляции и пробелов в конце строки
 set listchars=tab:->,trail:- "Установить символы которыми будет осуществляться подсветка
 
+let g:python3_host_prog = $HOME.'/.pyenv/versions/neovim3/bin/python'
+let g:python_host_prog = $HOME.'/.pyenv/versions/neovim2/bin/python'
+let g:UltiSnipsSnippetDirectories = [$HOME.'/.config/nvim/UltiSnips']
 autocmd FileType * set tabstop=2|set shiftwidth=2
 autocmd FileType python set tabstop=4|set shiftwidth=4
 
@@ -138,7 +141,6 @@ set conceallevel=1
 let g:tex_conceal='abdmg'
 
 
-
 function! MyOnBattery()
   if !empty(glob("/sys/class/power_supply/ACAD"))
     return readfile('/sys/class/power_supply/ACAD/online') == ['0']
@@ -150,13 +152,9 @@ else
   call neomake#configure#automake('nrw', 1000)
 endif
 
-let g:neomake_python_pylint_exe = 'python'
-let g:neomake_python_pylint_args = [
-    \ '/usr/bin/pylint',
-    \ '--output-format=text',
-    \ '--msg-template="{path}:{line}:{column}:{C}: [{symbol}] {msg} [{msg_id}]"',
-    \ '--reports=no'
-    \ ]
+let g:neomake_python_pylint_exe = 'PYTHONPATH=$PYENV_VIRTUAL_ENV:$PYTHONPATH '.g:python3_host_prog
+let g:neomake_python_pylint_args = ['-m', 'pylint', '-f', 'text', '--msg-template="{path}:{line}:{column}:{C}: [{symbol}] {msg}"', '-r', 'n']
+
 let g:neomake_python_enabled_makers = ['pylint']
 
 set background=dark
