@@ -4,7 +4,6 @@ https://github.com/xolox/vim-misc.git
 https://github.com/xolox/vim-colorscheme-switcher.git
 https://github.com/Chiel92/vim-autoformat.git
 https://github.com/tpope/vim-surround.git
-https://github.com/vim-latex/vim-latex.git
 https://github.com/neomake/neomake.git
 https://github.com/rafi/awesome-vim-colorschemes.git
 https://github.com/fatih/vim-go.git
@@ -16,3 +15,5 @@ https://github.com/sukima/xmledit.git
 https://github.com/pangloss/vim-javascript.git
 https://github.com/junegunn/fzf.vim.git
 https://github.com/alvan/vim-closetag.git
+https://github.com/SirVer/ultisnips.git
+https://github.com/lervag/vimtex.git
