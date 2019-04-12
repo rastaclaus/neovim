@@ -8,9 +8,11 @@ do
   echo $folder_name
   if ! [ -d $folder_name/ ]; then
     git clone $line
+    git submodule update --init
   else
     cd $folder_name
     git pull
+    git submodule update
     cd ..
   fi
 done
