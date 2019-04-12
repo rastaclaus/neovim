@@ -39,7 +39,8 @@ set listchars=tab:->,trail:- "Установить символы которым
 
 let g:python3_host_prog = $HOME.'/.pyenv/versions/neovim3/bin/python'
 let g:python_host_prog = $HOME.'/.pyenv/versions/neovim2/bin/python'
-let g:UltiSnipsSnippetDirectories = [$HOME.'/.config/nvim/UltiSnips']
+let g:UltiSnipsSnippetsDir = $HOME.'/.config/nvim/UltiSnips'
+let g:UltiSnipsSnippetDirectories = ['UltiSnips']
 autocmd FileType * set tabstop=2|set shiftwidth=2
 autocmd FileType python set tabstop=4|set shiftwidth=4
 
@@ -152,7 +153,7 @@ else
   call neomake#configure#automake('nrw', 1000)
 endif
 
-let g:neomake_python_pylint_exe = 'PYTHONPATH=$PYENV_VIRTUAL_ENV:$PYTHONPATH '.g:python3_host_prog
+let g:neomake_python_pylint_exe = g:python3_host_prog
 let g:neomake_python_pylint_args = ['-m', 'pylint', '-f', 'text', '--msg-template="{path}:{line}:{column}:{C}: [{symbol}] {msg}"', '-r', 'n']
 
 let g:neomake_python_enabled_makers = ['pylint']
