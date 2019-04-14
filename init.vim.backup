@@ -39,8 +39,7 @@ set listchars=tab:->,trail:- "Установить символы которым
 
 let g:python3_host_prog = $HOME.'/.pyenv/versions/neovim3/bin/python'
 let g:python_host_prog = $HOME.'/.pyenv/versions/neovim2/bin/python'
-let g:UltiSnipsSnippetsDir = $HOME.'/.config/nvim/UltiSnips'
-let g:UltiSnipsSnippetDirectories = ['UltiSnips']
+let g:UltiSnipsSnippetDirectories = [$HOME.'/.config/nvim/UltiSnips']
 autocmd FileType * set tabstop=2|set shiftwidth=2
 autocmd FileType python set tabstop=4|set shiftwidth=4
 
