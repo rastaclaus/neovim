@@ -41,8 +41,14 @@ let g:python3_host_prog = $HOME.'/.pyenv/versions/neovim3/bin/python'
 let g:python_host_prog = $HOME.'/.pyenv/versions/neovim2/bin/python'
 let g:UltiSnipsSnippetsDir = $HOME.'/.config/nvim/UltiSnips'
 let g:UltiSnipsSnippetDirectories = ['UltiSnips']
+
+let g:formatdef_my_yaml = '"prettier --parser=yaml"'
+let g:formatters_yaml = ['my_yaml']
+
 autocmd FileType * set tabstop=2|set shiftwidth=2
 autocmd FileType python set tabstop=4|set shiftwidth=4
+autocmd BufNewFile,BufRead *.tsx set filetype=javascript
+autocmd BufNewFile,BufRead *.ts set filetype=javascript
 
 "autocmd FileType * 
 "      \ match Error /\%161v.\+/
