@@ -50,6 +50,10 @@ autocmd FileType python set tabstop=4|set shiftwidth=4
 "autocmd FileType cpp 
 "      \ match Error /\%81v.\+/
 "Конец
+
+autocmd BufRead,BufNewFile *.ts set filetype=javascript
+autocmd BufRead,BufNewFile *.tsx set filetype=javascript
+
 augroup javascript
     au!
     au FileType javascript setlocal foldmethod=syntax
