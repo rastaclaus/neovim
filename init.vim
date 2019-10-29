@@ -43,4 +43,4 @@ source ~/.config/nvim/02-plugins-config.vim
 source ~/.config/nvim/03-autocmds.vim
 
 "цвета
-colors minimalist
+colors afterglow

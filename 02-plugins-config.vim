@@ -31,3 +31,7 @@ let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
+
+nnoremap qe :Files %:p:h<CR>
+nnoremap qE :Files<CR>
+nnoremap ed :Buffers<CR>
