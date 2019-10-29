@@ -16,3 +16,4 @@ Plug 'tpope/vim-repeat'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'alvan/vim-closetag'
