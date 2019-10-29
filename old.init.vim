@@ -1,5 +1,4 @@
 ""Начало Внешний вид
-"let $TERM='fbterm'
 syntax enable
 set shortmess+=I
 set syntax=on "Включить подсветку синтаксиса
@@ -7,10 +6,7 @@ set laststatus=2 "Всегда показывать строку состоян�
 set number "Нумеровать строки
 set numberwidth=4 "Ширина поля нумерации строк
 set showmatch "Показывать первую парную скобку после ввода второй
-set guifont=Monospace\ 12 "не работает
 set showcmd
-set splitbelow
-set splitright
 
 set ruler "Всегда показывать позицию курсора
 
@@ -20,7 +16,6 @@ set guicursor=a:blinkon0
 
 set t_Co=256
 set guioptions=""
-" hi Normal guibg=NONE ctermbg=NONE
 
 "Поведение
 set nocompatible "Отключить режим совместимости с классическим Vi
@@ -39,16 +34,17 @@ set listchars=tab:->,trail:- "Установить символы которым
 
 let g:python3_host_prog = $HOME.'/.pyenv/versions/neovim3/bin/python'
 let g:python_host_prog = $HOME.'/.pyenv/versions/neovim2/bin/python'
-let g:UltiSnipsSnippetDirectories = [$HOME.'/.config/nvim/UltiSnips']
+
+let g:formatdef_my_yaml = '"prettier --parser=yaml"'
+let g:formatters_yaml = ['my_yaml']
+
 autocmd FileType * set tabstop=2|set shiftwidth=2
 autocmd FileType python set tabstop=4|set shiftwidth=4
 
-"autocmd FileType * 
-"      \ match Error /\%161v.\+/
+filetype plugin on
+autocmd BufNewFile,BufRead *.tsx set filetype=javascript
+autocmd BufNewFile,BufRead *.ts set filetype=javascript
 
-"autocmd FileType cpp 
-"      \ match Error /\%81v.\+/
-"Конец
 augroup javascript
     au!
     au FileType javascript setlocal foldmethod=syntax
@@ -58,11 +54,10 @@ augroup END
 "Начало <Настройки поиска>
 set nohlsearch "Подсветка результатов поиска
 set incsearch "Поиск фрагмента текста во время набора
-"set ignorecase "Игнорировать регистр символов при поиске
 "Конец
 
 "Начало <Раскладка>
-set keymap=russian-jcukenwin 
+set keymap=russian-jcukenwin
 set iminsert=0 " по умолчанию - латинская раскладка
 set imsearch=0 " по умолчанию - латинская раскладка при поиске
 
@@ -84,26 +79,6 @@ call pathogen#infect()
 filetype plugin indent on
 "Конец <Инициализация Pathogen>
 
-let g:SuperTabDefaultCompletionType = "context"
-
-"let g:virtualenv = $VIRTUAL_ENV
-
-let g:deoplete#enable_at_startup = 1
-"if !exists('g:deoplete#omni#input_patterns')
-"  let g:deoplete#omni#input_patterns = {}
-"endif
-
-
-"let g:deoplete#sources#clang#libclang_path = "/usr/lib/libclang.so"
-"let g:deoplete#sources#clang#clang_header = "/usr/lib/clang"
-
-"autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-"let g:jedi#completions_enabled = 1
-
-if has("python3")
-  let g:jedi#force_py_version = 3
-endif
-
 if has('autocmd')
   autocmd GUIEnter * set visualbell t_vb=
   autocmd InsertEnter * set cursorline
@@ -112,34 +87,9 @@ if has('autocmd')
   autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 endif
 
-map <F3>  :call TRANSLATE()<cr>
-
-function TRANSLATE()
-   let  a=getline('.')
-   let co=col('.')-1
-   let starts=strridx(a," ",co)
-   let ends = stridx(a," ",co)
-   if ends==-1
-       let ends=strlen(a)
-   endif
-   let res = strpart(a,starts+1,ends-starts)
-   let cmds = "sdcv -n " . res
-   let out = system(cmds)
-   echo out
-endfunction
-
 set pdev=Virtual_PDF_Printer
 set printoptions=paper:A4,syntax:y,wrap:y,duplex:long
-set printencoding=koi8-r
-
-
-let g:tex_flavor='latex'
-let g:vimtex_view_method='zathura'
-let g:vimtex_compiler_progname='nvr'
-let g:vimtex_quickfix_mode=0
-set conceallevel=1
-let g:tex_conceal='abdmg'
-
+set printencoding=utf-8
 
 function! MyOnBattery()
   if !empty(glob("/sys/class/power_supply/ACAD"))
@@ -162,6 +112,6 @@ let g:neomake_python_pylint_args = ['-m',
       \'n' ]
 
 let g:neomake_python_enabled_makers = ['pylint']
-
+let g:ycm_global_ycm_extra_conf = '/home/artems/.config/nvim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 set background=dark
 colors deus

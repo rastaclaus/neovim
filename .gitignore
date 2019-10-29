@@ -1,8 +1,5 @@
+autoload
 bundle
-colors/*
-!colors/seoul*
-!colors/deus*
-templ/.ropeproject
+plugged
 .netrwhist
-
 glass.log
