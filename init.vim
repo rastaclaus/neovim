@@ -5,6 +5,8 @@ set secure
 set shell=/bin/sh
 set nobackup "Не создавать резервных копий файлов
 set noswapfile "Не использовать swap-файл
+set number "Нумеровать строки
+set numberwidth=4 "Ширина поля нумерации строк
 
 "Поддержка truecolor
 set termguicolors
