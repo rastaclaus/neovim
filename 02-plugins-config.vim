@@ -1,5 +1,8 @@
+"NerdTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "YCM
 let g:ycm_global_ycm_extra_conf = '/home/artems/.config/nvim/ycm_extra_conf.py'
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 "neomake
 function! MyOnBattery()

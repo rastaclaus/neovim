@@ -2,11 +2,13 @@
 scriptencoding utf-8
 set noexrc
 set secure
-set shell=/bin/sh
+set shell=/bin/zsh
 set nobackup "Не создавать резервных копий файлов
 set noswapfile "Не использовать swap-файл
 set number "Нумеровать строки
 set numberwidth=4 "Ширина поля нумерации строк
+set splitright
+set splitbelow
 
 "Поддержка truecolor
 set termguicolors
