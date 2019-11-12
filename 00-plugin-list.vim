@@ -4,6 +4,7 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'neomake/neomake'
 Plug 'fatih/vim-go'
 Plug 'Chiel92/vim-autoformat'
+Plug 'ianks/vim-tsx'
 
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
