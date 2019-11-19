@@ -5,6 +5,7 @@ Plug 'neomake/neomake'
 Plug 'fatih/vim-go'
 Plug 'Chiel92/vim-autoformat'
 Plug 'ianks/vim-tsx'
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
