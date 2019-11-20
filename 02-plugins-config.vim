@@ -1,9 +1,11 @@
 "NerdTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 "YCM
 let g:ycm_global_ycm_extra_conf = '/home/artems/.config/nvim/ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_insertion = 1
-
+"vim-markdown-preview
+let vim_markdown_preview_github=1
 "neomake
 function! MyOnBattery()
   if !empty(glob("/sys/class/power_supply/ACAD"))
