@@ -5,7 +5,9 @@
 let g:ycm_global_ycm_extra_conf = '/home/artems/.config/nvim/ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_insertion = 1
 "vim-markdown-preview
-let vim_markdown_preview_github=1
+let g:vim_markdown_preview_pandoc = 1
+let g:vim_markdown_preview_use_xdg_open = 1
+
 "neomake
 function! MyOnBattery()
   if !empty(glob("/sys/class/power_supply/ACAD"))
@@ -37,6 +39,15 @@ let g:fzf_action = {
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 
+
 nnoremap qe :Files %:p:h<CR>
 nnoremap qE :Files<CR>
 nnoremap ed :Buffers<CR>
+
+" vim-closetag
+let g:closetag_filetypes = 'html,xhtml,javascript,typescript,typescript.tsx'
+
+let g:closetag_regions = {
+  \ 'typescript.tsx': 'jsxRegion,tsxRegion',
+  \ 'javascript.jsx': 'jsxRegion',
+\}
