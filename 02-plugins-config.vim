@@ -50,3 +50,5 @@ let g:closetag_regions = {
   \ 'typescript.tsx': 'jsxRegion,tsxRegion',
   \ 'javascript.jsx': 'jsxRegion',
 \}
+" vim-autoformat
+let g:formatdef_tsfmt = "'tsfmt --stdin --no-tslint '.bufname('%')"
