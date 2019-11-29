@@ -46,9 +46,9 @@ nnoremap ed :Buffers<CR>
 " vim-closetag
 let g:closetag_filetypes = 'html,xhtml,javascript,typescript,typescript.tsx'
 
-let g:closetag_regions = {
-  \ 'typescript.tsx': 'jsxRegion,tsxRegion',
-  \ 'javascript.jsx': 'jsxRegion',
-\}
+" let g:closetag_regions = {
+"   \ 'typescript.tsx': 'jsxRegion,tsxRegion',
+"   \ 'javascript.jsx': 'jsxRegion',
+" \}
 " vim-autoformat
 let g:formatdef_tsfmt = "'tsfmt --stdin --no-tslint '.bufname('%')"

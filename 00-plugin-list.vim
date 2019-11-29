@@ -10,6 +10,7 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
+Plug 'xolox/vim-session'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rainglow/vim'
 
