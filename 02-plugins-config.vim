@@ -52,3 +52,10 @@ let g:closetag_filetypes = 'html,xhtml,javascript,typescript,typescript.tsx'
 " \}
 " vim-autoformat
 let g:formatdef_tsfmt = "'tsfmt --stdin --no-tslint '.bufname('%')"
+
+" vimtex
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+" set conceallevel=1
+" let g:tex_conceal='abdmg'

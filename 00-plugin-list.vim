@@ -10,7 +10,6 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
-Plug 'xolox/vim-session'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rainglow/vim'
 
@@ -21,3 +20,6 @@ Plug 'tpope/vim-repeat'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'alvan/vim-closetag'
+
+Plug 'lervag/vimtex'
+Plug 'Glench/Vim-Jinja2-Syntax'
