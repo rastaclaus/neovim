@@ -7,6 +7,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'HiPhish/jinja.vim'
 
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
