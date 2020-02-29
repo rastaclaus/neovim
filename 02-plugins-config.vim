@@ -23,6 +23,8 @@ endif
 let g:neomake_python_pylint_exe = g:python3_host_prog
 let g:neomake_python_pylint_args = ['-m',
       \'pylint',
+      \'--load-plugins',
+      \'pylint_flask_sqlalchemy',
       \'-f',
       \'text',
       \'--msg-template="{path}:{line}:{column}:{C}: [{symbol}] {msg}"',
