@@ -2,11 +2,12 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'ycm-core/YouCompleteMe'
 Plug 'neomake/neomake'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries' }
 Plug 'Chiel92/vim-autoformat'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'posva/vim-vue'
 
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
