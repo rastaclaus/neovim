@@ -1,9 +1,8 @@
 Plug 'scrooloose/nerdtree'
 
-
 " syntax
 Plug 'cespare/vim-toml'
-Plug 'ycm-core/YouCompleteMe'
+Plug 'zxqfl/tabnine-vim'
 Plug 'neomake/neomake'
 Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries' }
 Plug 'Chiel92/vim-autoformat'
