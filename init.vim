@@ -42,6 +42,7 @@ call plug#end()
 
 source ~/.config/nvim/01-keymaps.vim
 source ~/.config/nvim/02-plugins-config.vim
+source ~/.config/nvim/021-coc-nvim.vim
 source ~/.config/nvim/03-autocmds.vim
 
 "цвета
