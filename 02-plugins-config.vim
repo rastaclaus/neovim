@@ -5,6 +5,7 @@
 let g:ycm_global_ycm_extra_conf = '/home/artems/.config/nvim/ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_add_preview_to_completeopt = -1
+
 "vim-markdown-preview
 let g:vim_markdown_preview_pandoc=1
 let g:vim_markdown_preview_use_xdg_open=1

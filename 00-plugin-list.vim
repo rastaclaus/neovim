@@ -1,7 +1,6 @@
 Plug 'scrooloose/nerdtree'
 
-" Plug 'ycm-core/YouCompleteMe'
-Plug 'zxqfl/tabnine-vim'
+Plug 'ycm-core/YouCompleteMe'
 Plug 'neomake/neomake'
 Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries' }
 Plug 'Chiel92/vim-autoformat'

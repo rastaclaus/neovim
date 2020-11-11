@@ -59,7 +59,8 @@ def GetCompilationInfoForFile(database, filename):
                 compilation_info = database.GetCompilationInfoForFile(replacement_file)
                 if compilation_info.compiler_flags_:
                     return compilation_info
-            # If that wasn't successful, try replacing possible header directory with possible source directories.
+            # If that wasn't successful, try replacing possible header
+            # directory with possible source directories.
             for header_dir in HEADER_DIRECTORIES:
                 for source_dir in SOURCE_DIRECTORIES:
                     src_file = replacement_file.replace(header_dir, source_dir)
