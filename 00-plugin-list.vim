@@ -1,18 +1,11 @@
 Plug 'scrooloose/nerdtree'
 
-" syntax
-Plug 'cespare/vim-toml'
-Plug 'zxqfl/tabnine-vim'
-Plug 'neomake/neomake'
-Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries' }
-Plug 'Chiel92/vim-autoformat'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'JamshedVesuna/vim-markdown-preview'
-Plug 'leafOfTree/vim-vue-plugin'
-Plug 'Glench/Vim-Jinja2-Syntax'
+"syntax
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'sbdchd/neoformat'
 
 " apperance
+
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'rafi/awesome-vim-colorschemes'
@@ -24,8 +17,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'rking/ag.vim'
-Plug 'alvan/vim-closetag'
 
 " editor
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-Plug 'lervag/vimtex'
