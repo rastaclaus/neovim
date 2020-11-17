@@ -4,7 +4,7 @@ set iminsert=0 " по умолчанию - латинская раскладка
 set imsearch=0 " по умолчанию - латинская раскладка при поиске
 
 nmap <silent> <F2> :NERDTreeToggle<CR>
-nmap <silent> <F5> :Neoformat<CR>
+nmap <silent> <F5> :Format<CR>
 nmap <silent> <F6> :NextColorScheme<CR>
 nmap <silent> <F7> :PrevColorScheme<CR>
 

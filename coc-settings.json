@@ -1,3 +1,8 @@
 {
-  "python.formatting.provider": "yapf"
+  "python.autoComplete.addBrackets": true,
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": ["--enable=F,E,C,R", "--jobs=4"],
+  "python.formatting.provider": "yapf",
+  "python.formatting.yapfArgs": ["--style={based_on_style: yapf, column_limit: 80, indent_width: 4}"]
 }
