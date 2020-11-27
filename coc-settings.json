@@ -1,8 +1,10 @@
 {
   "python.autoComplete.addBrackets": true,
   "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
-  "python.linting.pylintArgs": ["--rcfile=/home/artems/.pylintrc"],
+  "python.linting.pylintEnabled": false,
+  "python.linting.pylamaEnabled": true,
+  "python.linting.pylamaArgs": ["--options", "/home/artems/pylama.ini"],
   "python.formatting.provider": "yapf",
-  "python.formatting.yapfArgs": ["--style={based_on_style: pep8, column_limit: 120, indent_width: 4}"]
+  "python.formatting.yapfArgs": ["--style={based_on_style: pep8, column_limit: 120, indent_width: 4}"],
+  "tabnine.priority": 50
 }
