@@ -1,5 +1,5 @@
 {
-  "python.autoComplete.addBrackets": true,
+  "python.autoComplete.addBrackets": false,
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": false,
   "python.linting.pylamaEnabled": true,
